@@ -12,11 +12,6 @@ export const INGREDIENTS: Ingredient[] = [
   { name: 'Bacon', price: 60, image: baconImage },
 ];
 const App = () => {
-
-  return (
-      <>
-      </>
-  )
-};
+}
 
 export default App
