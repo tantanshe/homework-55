@@ -1,17 +1,27 @@
 import React from 'react';
-import { Ingredient} from '../../types';
 import IngredientBtn from '../IngredientBtn/IngredientBtn';
+import { Ingredient } from '../../types';
 
 interface IngredientListProps {
-  ingredients: Ingredient [];
-  ingredientCount: { [name: string]: number };
+  ingredients: { name: string; count: number }[];
+  ingredientDetails: Ingredient[];
+  onAdd: (name: string) => void;
+  onRemove: (name: string) => void;
 }
-const IngredientList:React.FC<IngredientListProps> = ({ingredients, ingredientCount}) => {
+
+const IngredientList: React.FC<IngredientListProps> = ({ ingredients, ingredientDetails, onAdd, onRemove }) => {
   return (
     <div>
       {ingredients.map((ingredient) => (
-        <IngredientBtn key={ingredient.name} ingredient={ingredient} count={ingredientCount[ingredient.name]}/>
-        ))}
+        <div key={ingredient.name}>
+          <IngredientBtn
+            ingredient={ingredient}
+            ingredientDetails={ingredientDetails}
+            onAdd={() => onAdd(ingredient.name)}
+            onRemove={() => onRemove(ingredient.name)}
+          />
+        </div>
+      ))}
     </div>
   );
 };
