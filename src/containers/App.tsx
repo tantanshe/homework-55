@@ -56,16 +56,23 @@ const App = () => {
   const totalPrice = calculateTotalPrice();
 
   return (
-    <>
-      <IngredientList
-        ingredients={ingredients}
-        ingredientDetails={INGREDIENTS}
-        onAdd={addIngredient}
-        onRemove={removeIngredient}
-      />
-      <Burger ingredients={ingredients}/>
-      <div>Total Price: {totalPrice} kgs</div>
-    </>
+    <div>
+      <h1 className="title">Make your own burger!</h1>
+      <div className="burger-app">
+        <div className="first-section">
+          <IngredientList
+            ingredients={ingredients}
+            ingredientDetails={INGREDIENTS}
+            onAdd={addIngredient}
+            onRemove={removeIngredient}
+          />
+        </div>
+        <div className="second-section">
+          <Burger ingredients={ingredients}/>
+          <div className="total-price">Total Price: {totalPrice} kgs</div>
+        </div>
+      </div>
+    </div>
   );
 };
 

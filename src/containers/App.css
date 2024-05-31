@@ -5,6 +5,66 @@
   text-align: center;
 }
 
+.title {
+  color: #004f4f;
+}
+
+.first-section {
+  border: 2px solid teal;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-app {
+  display: flex;
+  justify-content: space-between;
+  max-width: fit-content;
+  margin: auto;
+  gap: 100px;
+}
+
+.ingredient {
+  display: flex;
+}
+
+.ingredient-btn {
+  padding: 15px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 2px solid teal;
+  background-color: #9ed9c4;
+  color: #004f4f;
+  font-size: 20px;
+}
+
+.ingredient-count {
+  align-self: center;
+  margin: 0 20px;
+  width: 10px;
+  font-size: 20px;
+}
+
+.delete-btn {
+  align-self: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffbcc3;
+  border: 2px solid darkred;
+}
+
+.total-price {
+  font-size: 20px;
+}
+
 .BreadBottom {
   height: 13%;
   width: 80%;

@@ -15,13 +15,14 @@ const IngredientBtn: React.FC<IngredientBtnProps> = ({ ingredient, ingredientDet
     return null;
   }
   return (
-    <div>
-      <button onClick={onAdd}>
-        <img src={ingredientDetail.image} alt={ingredient.name} style={{ width: "30px" }} />
+    <div className="ingredient">
+
+      <button onClick={onAdd} className="ingredient-btn">
+        <img src={ingredientDetail.image} alt={ingredient.name} style={{ width: "70px" }} />
         {ingredient.name}
       </button>
-      <span>{ingredient.count}</span>
-      <button onClick={onRemove}>Delete</button>
+      <span className="ingredient-count">{ingredient.count}</span>
+      <button className="delete-btn" onClick={onRemove}>Delete</button>
     </div>
   );
 };
